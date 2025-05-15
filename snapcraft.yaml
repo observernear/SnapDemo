@@ -1,0 +1,20 @@
+name: snapdemo
+base: core22
+version: "0.1"
+summary: snapdemo app
+description: |
+  Python script in a snap!
+
+grade: stable
+confinement: strict
+
+apps:
+  snapdemo:
+    command: bin/main
+
+parts:
+  snapdemo:
+    plugin: dump
+    source: .
+    organize:
+      main.py: bin/main
